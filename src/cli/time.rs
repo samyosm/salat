@@ -1,5 +1,7 @@
 use clap::Args;
 
+use super::commands::Execute;
+
 #[derive(Debug, Args)]
 /// Displays information about a prayer
 pub struct Time {
@@ -9,4 +11,10 @@ pub struct Time {
     /// Displays the time left before a prayer
     #[arg(short, long)]
     left: bool,
+}
+
+impl Execute for Time {
+    fn execute(&self) {
+        todo!()
+    }
 }
